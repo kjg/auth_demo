@@ -1,4 +1,4 @@
 json.array!(@comments) do |comment|
   json.extract! comment, :id, :author, :body
-  json.url comment_url(comment, format: :json)
+  json.url polymorphic_url(path_prefix << comment, format: :json)
 end

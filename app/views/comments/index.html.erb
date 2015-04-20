@@ -16,9 +16,9 @@
       <tr>
         <td><%= comment.author %></td>
         <td><%= comment.body %></td>
-        <td><%= link_to 'Show', comment %></td>
-        <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
-        <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', path_prefix << comment %></td>
+        <td><%= link_to 'Edit', [:edit] + path_prefix << comment %></td>
+        <td><%= link_to 'Destroy', path_prefix << comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Comment', new_comment_path %>
+<%= link_to 'New Comment', [:new] + path_prefix << "comment" %>

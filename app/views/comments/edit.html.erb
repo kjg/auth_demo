@@ -1,6 +1,6 @@
 <h1>Editing Comment</h1>
 
-<%= render 'form' %>
+<%= render 'comments/form' %>
 
-<%= link_to 'Show', @comment %> |
-<%= link_to 'Back', comments_path %>
+<%= link_to 'Show', path_prefix << @comment %> |
+<%= link_to 'Back', path_prefix << "comments" %>
