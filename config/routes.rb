@@ -7,6 +7,10 @@ Rails.application.routes.draw do
     namespace :basic_auth do
       resources :comments
     end
+
+    namespace :digest_auth do
+      resources :comments
+    end
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
