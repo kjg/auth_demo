@@ -1,4 +1,4 @@
 class Api::BasicAuth::CommentsController < Api::ApiController
   include CommentsCrud
-  http_basic_authenticate_with name: "auth_demo", password: "secret"
+  http_basic_authenticate_with name: "auth_demo", password: "secret_key"
 end
